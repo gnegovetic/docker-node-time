@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>    
+            document.addEventListener('DOMContentLoaded', function() {
+                var socket = io();    
+                socket.on('time', function(time) {
+                    document.getElementById('time').innerHTML = "Time: " + time;        
+                });  
+            });       
+        </script>
+    </head>
+<body>
+    <h1 id="time">Time: ---</h1>
+</body>
+</html>
