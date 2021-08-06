@@ -13,5 +13,5 @@ On a Raspberry Pi Zero with Docker installed:
 2. Run the image: ``` docker run --publish 8087:8087 --detach --name node-time-server node-time ```
     (This will remap the internal port 8087 to external 8087)
     
-3. Open the website: http://raspberrypi:8087
+3. Open the website: http://localhost:8087
 
