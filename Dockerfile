@@ -1,4 +1,4 @@
-FROM arm32v6/node:alpine
+FROM node:alpine
 
 # Create app directory
 WORKDIR /usr/app
