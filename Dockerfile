@@ -4,15 +4,16 @@ FROM node:alpine
 WORKDIR /usr/app
 
 # Install dependecies
-COPY package*.json ./
-RUN npm install
+#COPY package*.json ./
+#RUN npm install
 
-# Bundle app source
+# Copy all files
 COPY . .
+
+# Install NPM packages
+RUN npm install
 
 # Starte the server
 EXPOSE 8087
-CMD [ "node", "index.js" ]
+CMD node index.js
 
-# Build with: docker build -t <name> .
-# Run with: docker run -p 50087:8087 -d <name>
